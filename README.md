@@ -1,1 +1,0 @@
-# liftting.github.io
