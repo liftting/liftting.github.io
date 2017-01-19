@@ -84,7 +84,8 @@
 <meta property="og:site_name" content="月光点点小站">
 <meta property="og:description" content="HTTP2.0 协议机制针对之前的http1.x时代，做出了很大的改善，进行了性能，流量的优化处理，下面的一篇文章，很值得我们去学习，参考：http2.0那些事">
 <meta property="og:image" content="http://yoursite.com/okhttp2-images/okhttp_header.png">
-<meta property="og:updated_time" content="2017-01-16T08:50:19.000Z">
+<meta property="og:image" content="http://yoursite.com/okhttp2-images/http2_frame.png">
+<meta property="og:updated_time" content="2017-01-16T09:25:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http2知识总结">
 <meta name="twitter:description" content="HTTP2.0 协议机制针对之前的http1.x时代，做出了很大的改善，进行了性能，流量的优化处理，下面的一篇文章，很值得我们去学习，参考：http2.0那些事">
@@ -349,7 +350,8 @@
 </li>
 </ul>
 <p>具体的知识介绍，参考(<a href="http://mrpeak.cn/blog/http2/" target="_blank" rel="external">http://mrpeak.cn/blog/http2/</a>)<br>我们来分析下，okhttp是如何在代码层级上对http2.0技术的支撑的，</p>
-<p>2，HTTP2.0技术介绍<br>1）数据格式改动，将文本格式修改成二进制的格式，<br><img src="okhttp2-images/okhttp_header.png" alt="这是我的图片"></p>
+<p>2，HTTP2.0技术介绍<br>1）数据格式改动，将文本格式修改成二进制的格式，<br><img src="okhttp2-images/okhttp_header.png" alt="这是我的图片"><br><img src="okhttp2-images/http2_frame.png" alt="这是我的图片"></p>
+<p>2) 多路复用，stream_id，来配置请求是否能共享连接通道，同时也为request设置优先级和依赖，解决请求阻塞问题<br>3) header 压缩</p>
 <h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p><a href="http://mrpeak.cn/blog/http2/" target="_blank" rel="external">HTTP2.0那些事</a><br><a href="https://imququ.com/post/http2-resource.html" target="_blank" rel="external">HTTP/2 资料汇总</a><br><a href="http://blog.csdn.net/zhuyiquan/article/details/52585941" target="_blank" rel="external">Nginx实现HTTP/2——原理、实践与数据分析</a></p>
 
       
@@ -386,6 +388,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/16/http2-server/" rel="prev" title="http2.0环境搭建">
+                http2.0环境搭建 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -455,7 +461,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -466,7 +472,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
