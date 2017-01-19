@@ -83,12 +83,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/16/http2-server/index.html">
 <meta property="og:site_name" content="月光点点小站">
 <meta property="og:description" content="搭建server端使用node.js来搭建http2.0的server环境，1，下载nodejs的http2.0模块，具体配置可参考https://github.com/molnarg/node-http2">
-<meta property="og:image" content="http://yoursite.com/http2-server/https.png">
-<meta property="og:updated_time" content="2017-01-19T10:01:52.000Z">
+<meta property="og:image" content="http://yoursite.com/https.png">
+<meta property="og:updated_time" content="2017-01-19T10:10:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http2.0环境搭建">
 <meta name="twitter:description" content="搭建server端使用node.js来搭建http2.0的server环境，1，下载nodejs的http2.0模块，具体配置可参考https://github.com/molnarg/node-http2">
-<meta name="twitter:image" content="http://yoursite.com/http2-server/https.png">
+<meta name="twitter:image" content="http://yoursite.com/https.png">
 
 
 
@@ -314,7 +314,7 @@
 <p>3，这时我们就可以创建自己的server代码了，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> http2=<span class="built_in">require</span>(<span class="string">'http2'</span>);</div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> options = &#123;</div><div class="line">    <span class="attr">key</span>: fs.readFileSync(<span class="string">'./server.key'</span>), <span class="comment">//读取key -- 这个其实算是公钥，公开的</span></div><div class="line">    cert: fs.readFileSync(<span class="string">'./server.crt'</span>) <span class="comment">//读取crt -- 这个是CA认证加密的私钥</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">http2.createServer(options, <span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">    response.end(<span class="string">'Hello world!'</span>);</div><div class="line">&#125;).listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure></p>
 <p>4，因为http2.0协议需要走 https（可支持不走https请求），我们需要创建自己的证书，可以直接在线创建免费的证书<a href="https://csr.chinassl.net/index.html" target="_blank" rel="external">免费证书创建</a><br> 创建完成后，添加到项目目录下即可，</p>
 <p> 5，在浏览器中打开：<br> <a href="https://localhost:8080" target="_blank" rel="external">https://localhost:8080</a><br> 如果看到返回的数据，即server搭建成功</p>
-<h4 id="了解https"><a href="#了解https" class="headerlink" title="了解https"></a>了解https</h4><p>因为HTTP2.0协议，是在SSL层上进行的，所以了解这个必须要先去了解下https工作原理，<br><img src="http2-server/https.png" width="400" height="300" alt="https交互过程" align="center"></p>
+<h4 id="了解https"><a href="#了解https" class="headerlink" title="了解https"></a>了解https</h4><p>因为HTTP2.0协议，是在SSL层上进行的，所以了解这个必须要先去了解下https工作原理，<br><img src="https.png" width="400" height="300" alt="https交互过程" align="center"></p>
 <ul>
 <li>浏览器向服务器请求时，会带上SSL协议版本号，加密算法总类，以及通信需要的各种信息等</li>
 <li>服务器像客户端发送自己的SSL协议版本号，加密算法等其他信息，同时会<code>带上自己的证书</code></li>
