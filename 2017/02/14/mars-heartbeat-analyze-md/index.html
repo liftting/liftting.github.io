@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="网络," />
 
 
 
@@ -77,16 +77,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="做IM的都知道，要想保持这个底层通道连接存活，那就需要使用心跳策略，定时给服务器发送数据包来告诉服务器本地客户端还存活，防止服务器在一定时间后将这个socket连接给断开，但是如果频繁的发送数据包会造成用户电量大量消耗，导致我们的APP出现在耗电排行的前面，很容易被用户杀掉，那么如何控制这个发送时间间隔呢，对于这个问题，微信提出了他们的解决方案，智能心跳策略">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/01/12/hello-world/index.html">
+<meta property="og:title" content="mars智能心跳过程解析">
+<meta property="og:url" content="http://yoursite.com/2017/02/14/mars-heartbeat-analyze-md/index.html">
 <meta property="og:site_name" content="月光点点小站">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2017-01-12T06:54:24.000Z">
+<meta property="og:description" content="做IM的都知道，要想保持这个底层通道连接存活，那就需要使用心跳策略，定时给服务器发送数据包来告诉服务器本地客户端还存活，防止服务器在一定时间后将这个socket连接给断开，但是如果频繁的发送数据包会造成用户电量大量消耗，导致我们的APP出现在耗电排行的前面，很容易被用户杀掉，那么如何控制这个发送时间间隔呢，对于这个问题，微信提出了他们的解决方案，智能心跳策略">
+<meta property="og:updated_time" content="2017-02-14T09:39:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="mars智能心跳过程解析">
+<meta name="twitter:description" content="做IM的都知道，要想保持这个底层通道连接存活，那就需要使用心跳策略，定时给服务器发送数据包来告诉服务器本地客户端还存活，防止服务器在一定时间后将这个socket连接给断开，但是如果频繁的发送数据包会造成用户电量大量消耗，导致我们的APP出现在耗电排行的前面，很容易被用户杀掉，那么如何控制这个发送时间间隔呢，对于这个问题，微信提出了他们的解决方案，智能心跳策略">
 
 
 
@@ -114,13 +114,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/12/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/14/mars-heartbeat-analyze-md/"/>
 
 
 
 
 
-  <title> Hello World | 月光点点小站 </title>
+  <title> mars智能心跳过程解析 | 月光点点小站 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/12/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/14/mars-heartbeat-analyze-md/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="cyg">
@@ -257,7 +257,7 @@
             
             
               
-                Hello World
+                mars智能心跳过程解析
               
             
           </h1>
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-12T12:58:59+08:00">
-                2017-01-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-14T16:30:59+08:00">
+                2017-02-14
               </time>
             
 
@@ -308,16 +308,10 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>做IM的都知道，要想保持这个底层通道连接存活，那就需要使用心跳策略，定时给服务器发送数据包来告诉服务器本地客户端还存活，防止服务器在一定时间后将这个socket连接给断开，但是如果频繁的发送数据包会造成用户电量大量消耗，导致我们的APP出现在耗电排行的前面，很容易被用户杀掉，那么如何控制这个发送时间间隔呢，对于这个问题，微信提出了他们的解决方案，<a href="http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&amp;mid=207243549&amp;idx=1&amp;sn=4ebe4beb8123f1b5ab58810ac8bc5994&amp;scene=21#wechat_redirect" target="_blank" rel="external">智能心跳策略</a></p>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h4 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h4><p><code>GCM</code>:这个是Google Cloud Messageing 的缩写，即Google自己的消息推送通道，对于国外的APP来说，一般都会选择使用这个来进行消息的推送，但是在国内，因为Google play商店限制导致这个通道使用率很低，所以一般都不会使用</p>
+<p><code>信令通道与数据通道</code>: 下面是两段关于这个概念的介绍，<br><code>1, 手机要先建立一个通道，无线侧是RAB，核心侧是GTP隧道，这个建好后，微信建立个TCP连接，然后就发数据了；建立RAB和GTP的过程，就是信令控制过程</code><br><code>2, 手机有空闲模式和连接模式，连接模式下还有四种状态。每次手机发起联网申请，都会有模式的改变，模式的改变都是通过和移动网络间信令的传递来实现，把手机从空闲模式转换到连接模式，才能互相连通。就像拨打电话一样，从你拨打对方号码一直到对方的电话振铃，都是信令的消息在交互，而对方接听电话以后，那就是属于业务流量了。无论是你访问网页还是看视频还是用微信，从你发起联网申请一直到手机和服务器传递IP数据包以前，都是通过信令的交换来实现手机和移动网络间的连接</code><br><code>3, 智能手机之所以会造成信令风暴，最主要的原因就是根据其使用业务的不同情况，3GPP定义了几种不同的状态；智能手机在状态间迁移时，会产生不同数量的信令负荷；如果状态转换的频繁了，则将会产生大量信令，加重交换机的处理负担，超出处理能力时，会导致交换机宕机，也称为信令风暴。       微信恰恰是频繁引起状态转换的应用之一。 微信其实和其他IP之上的服务的区别在于比如观看视频，在手机从空闲状态进入CELL_DCH状态以后，就不会继续有信令发起，而微信呢，平均每个PS呼叫下载数据量非常低，绝大部分呼叫下载数据量低于5Kbyte，每次PS呼叫时间也很短，微信和QQ大量使用了即时消息、状态服务、位置服务等在线业务，终端均建立了PS RABs连接，但这些连接的数据传输量很小，如仅显示好友状态，不传输或者只传输少量的数据。智能手机为保持这些应用，频繁收发小数据包来保持IP连接开通，即“心跳”反应，通常间隔每分钟或几分钟，数据量远远小于1KB。另外为了延长电池使用时间，每次消息发送完毕后，终端强行转换为空闲状态，状态转换不受网络控制。终端节电功能造成的释放次数往往是系统正常释放次数的10倍以上。      手机有空闲模式和连接模式。从空闲状态转到cell_dch状态，空口大概需要三十条信令。连接模式也有四种状态，状态之间的转换都是需要消耗信令的。所以实际上所有的小流量包，频繁呼叫类型的应用都是引起信令风暴的原因，而为什么抓住微信呢，第一，微信用户多，第二，微信动了运营商语音和短信服务的奶酪。</code><br><a href="http://bbs.c114.net/thread-695121-1-1.html" target="_blank" rel="external">微信信令问题参考</a></p>
 
       
     </div>
@@ -339,10 +333,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/网络/" rel="tag"># 网络</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/17/see-everyday/" rel="next" title="每天看一点">
+                <i class="fa fa-chevron-left"></i> 每天看一点
+              </a>
             
           </div>
 
@@ -350,8 +354,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/12/mark-down-learn/" rel="prev" title="markdown使用记录">
-                markdown使用记录 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/16/thread-weekday/" rel="prev" title="thread-weekday">
+                thread-weekday <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -468,7 +472,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础概念"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a></li></ol></div>
             
 
           </div>
